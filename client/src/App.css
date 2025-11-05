@@ -1,0 +1,33 @@
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* === Focus Glow & Expand Animation === */
+.currency-input {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Green glow for INR */
+.currency-input.inr:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.4); /* Tailwind green-500 */
+}
+
+/* Blue glow for USD */
+.currency-input.usd:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.45); /* Tailwind blue-500 */
+}
+
+/* Purple glow for EUR */
+.currency-input.eur:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.45); /* Tailwind purple-500 */
+}
