@@ -68,4 +68,10 @@ app.get("/api/quote", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`✅ Backend running on port ${PORT}`));
+// Only listen on a port if not in Vercel environment
+if (process.env.VERCEL !== "1") {
+  app.listen(PORT, () => console.log(`✅ Backend running on port ${PORT}`));
+}
+
+// Export for Vercel serverless functions
+export default app;
