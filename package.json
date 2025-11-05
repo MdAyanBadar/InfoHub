@@ -2,7 +2,7 @@
   "name": "infohub",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd client && npm install && npm run build"
+    "build": "npm --prefix client run build"
   },
   "dependencies": {
     "express": "^4.19.2",
