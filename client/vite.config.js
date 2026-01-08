@@ -3,11 +3,11 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-
-  build: {// e
+  base: "/", // ✅ use absolute root for Vercel static hosting
+  build: {
     outDir: "dist",
+    assetsDir: "assets", // standard default
   },
-
   server: {
     proxy: {
       "/api": {
